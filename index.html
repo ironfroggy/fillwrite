@@ -1,0 +1,49 @@
+<!doctype html>
+
+<title>fillwrite</title>
+<textarea id="fillwrite"></textarea>
+<p>Fill the space with some words.</p>
+<p>Concept by <a href="http://twitter.com/ironfroggy">@ironfroggy</a>.</p>
+
+<script>
+	var ta = document.getElementById('fillwrite');
+	var size = 100;
+	ta.onkeyup = function() {
+		var vscroll = this.clientHeight != this.scrollHeight;
+		var hscroll = this.clientWidth != this.scrollWidth;
+
+		while (vscroll || hscroll) {
+			size -= 0.1;
+			this.style.fontSize = size+'px';
+
+			vscroll = this.clientHeight != this.scrollHeight;
+			hscroll = this.clientWidth != this.scrollWidth;
+		}
+	}
+	ta.focus();
+</script>
+
+<style>
+	body {
+		background-color: black;
+		color: white;
+		font-family: sans-serif;
+	}
+	#fillwrite {
+		color: black;
+		width: 200px;
+		height: 200px;
+		font-size: 100px;
+		margin: 100px auto 0px;
+		display: block;
+	}
+	p {
+		font-size: 15px;
+		width: 200px;
+		margin: 10px auto;
+	}
+	a {
+		color: papayawhip;
+		text-decoration: none;
+	}
+</style>
