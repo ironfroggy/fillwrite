@@ -25,25 +25,45 @@
 
 <style>
 	body {
-		background-color: black;
-		color: white;
+		background-color: #fffcf9;
+		color: black;
 		font-family: sans-serif;
 	}
+    textarea {
+        border: none;
+        overflow: auto;
+        outline: none;
+
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
 	#fillwrite {
-		color: black;
 		width: 200px;
 		height: 200px;
 		font-size: 100px;
+        font-family: serif;
 		margin: 100px auto 0px;
 		display: block;
+        text-align: justify;
+        white-space: normal;
+        background-color: inherit;
+
+        padding: 5px;
+        border: 1px solid lightgrey;
+
+        resize: none;
 	}
+    #fillwrite:hover {
+        resize: initial;
+    }
 	p {
 		font-size: 15px;
 		width: 200px;
 		margin: 10px auto;
 	}
 	a {
-		color: papayawhip;
+		color: #05B8CC;
 		text-decoration: none;
 	}
 </style>
